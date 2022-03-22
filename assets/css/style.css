@@ -2,6 +2,7 @@
   /******** color ********/
   --color-light-dark: #2f2f2f;
   --color-white: #f4ece1;
+  --color-pure-white: #ffffff;
   --color-orange: #ff7e00;
   --color-purple-dark: #382274;
   --color-red: #ec2633;
@@ -33,70 +34,123 @@ body {
 
 .container {
   width: 1140px;
-  padding-right: 5px;
-  padding-left: 5px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 }
 
-ul li{
+.container-padding {
+  padding: 120px 0px 40px 0px;
+}
+
+ul li {
   list-style-type: none;
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--color-light-dark);
 }
 
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clearfix {
+  clear: both;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: 0.5s all ease;
+}
+
+.content-title {
+  font-size: 2.58rem;
+  font-weight: 700;
+  color: var(--color-light-dark);
+  line-height: 5px;
+}
 /*====================================================
                     Navigation Section CSS*
 =====================================================*/
-.navbar{
-  display: flex;
+.navbar {
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
-}
-.navbar-logo img{
-  width: 80px;
-}
-.navbar .navbar-menu ul{
-  display: flex;
-  gap: 1rem;
+  padding: 10px 15px;
+  background-color: var(--color-white);
+  /* position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 999; */
 }
 
-.navbar .navbar-menu ul li a{
+.navbar-logo img {
+  width: 80px;
+}
+
+.navbar .navbar-menu ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.navbar .navbar-menu ul li a {
   font-weight: 500;
   font-size: 0.9rem;
   padding: 10px;
+  transition: 0.5s all;
 }
-.navbar .navbar-menu ul li a.active{
+.navbar .navbar-menu ul li a:hover {
+  background-color: var(--color-red);
+  color: var(--color-white) !important;
+  border-radius: 5px;
+}
+.navbar .navbar-menu ul li a.active {
   color: var(--color-red);
 }
-.nav-search-box{
+.nav-search-box {
   background-color: var(--color-white);
-  padding: 10px 15px;
+  padding: 8px 15px;
   border-radius: 25px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-.nav-search-box input{
+.nav-search-box input {
   background-color: transparent;
   border: none;
   outline: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 0px 10px;
   color: var(--color-light-dark);
   border-right: 1px solid var(--color-light-gray);
+  width: 140px;
 }
-.nav-search-box input::placeholder{
+.nav-search-box input::placeholder {
   color: var(--color-light-dark);
 }
-.nav-search-box > i{
+.nav-search-box > i {
   color: var(--color-light-gray);
   font-size: 0.9rem;
 }
 
-.nav-search-box .quantity{
+.nav-search-box .quantity {
   background-color: var(--color-red);
   width: 20px;
   height: 20px;
@@ -106,5 +160,178 @@ a{
   color: var(--color-white);
   font-size: 0.8rem;
   box-shadow: 0px 0px 10px var(--color-red);
+}
 
+/*====================================================
+                    Top Banner CSS*
+=====================================================*/
+.top-banner {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.top-banner > div {
+  flex-basis: 50%;
+}
+
+.food-title {
+  font-size: 7.35rem;
+  font-weight: 800;
+  display: inline;
+  color: var(--color-orange);
+}
+.content-title-section {
+  position: relative;
+  padding: 0;
+}
+.content-title-section div {
+  position: absolute;
+  top: 27%;
+  left: 50%;
+}
+.content-title-section::after {
+  content: "";
+  background-image: url(../images/Group4.png);
+  background-size: 135px 185px;
+  transform: rotate(350deg);
+  position: absolute;
+  top: -70px;
+  right: 15px;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 300px;
+  display: inline-block;
+}
+.content-title-section span {
+  display: flex;
+  font-size: 3.05rem;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.food-title span {
+  font-size: 3.05rem;
+  display: inline-block;
+}
+.top-content-section > .short-description {
+  color: var(--color-light-gray);
+}
+
+.order-btn {
+  background-color: var(--color-light-dark);
+  color: var(--color-white);
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px var(--color-light-dark);
+}
+.order-btn:hover {
+  background-color: var(--color-red);
+}
+
+.play-video-btn {
+  padding: 10px 20px;
+  background-color: transparent;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.play-video-btn > i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--color-white) !important;
+  box-shadow: 0px 0px 10px var(--color-light-gray);
+  text-align: center;
+}
+.play-video-btn > span {
+  margin-left: 10px;
+}
+.rating {
+  margin-top: 25px;
+}
+.rating > i {
+  color: var(--color-orange);
+  font-size: 1.4rem;
+}
+p.rating-text {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-light-gray);
+}
+p.rating-text > span {
+  color: var(--color-light-dark);
+}
+
+/*====================================================
+                    Todays Trending Food CSS*
+=====================================================*/
+.content-description {
+  font-size: 1rem;
+  color: var(--color-light-gray);
+}
+
+.trending-food .banner img {
+  height: 300px;
+}
+.trending-food .gallery {
+  text-align: center;
+  padding: 10px;
+}
+.trending-food .gallery img {
+  height: 50px;
+  margin: 0ox 20px;
+  border: 1px solid var(--color-light-gray);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.trending-food-content{
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: flex-end; */
+}
+
+.content-sub-title{
+  color: var(--color-light-dark);
+  font-size: 1.8rem;
+  line-height: 0px;
+}
+
+.price{
+  color: var(--color-yellow);
+  font-size: 2.2rem;
+}
+
+.rating-dark{
+  display: flex;
+  justify-content: space-between;
+}
+.rating-dark > i{
+  color: var(--color-light-dark);
+}
+.food-cart-section{
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid var(--color-light-gray);
+  /* padding: 10px; */
+  margin-top: 10px;
+}
+.food-cart-section >div{
+  flex-basis: 50%;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.food-cart-section .wishlist{
+  border-right: 1px solid var(--color-light-dark);
+  color: var(--color-red);
+}
+
+.food-cart-section .add-cart{
+  color: var(--color-orange);
 }

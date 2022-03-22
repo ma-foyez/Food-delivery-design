@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Delivery</title>
 
-      <!-- Google Fonts -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200&display=swap"
-          rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Neucha&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
 
     <!--Main css files-->
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -26,7 +26,7 @@
     <div id="wrapper">
         <!-------Start Navigation menu section------>
         <div class="container">
-            <nav class="navbar">
+            <nav class="navbar flex">
                 <div>
                     <a href="#wrapper" class="navbar-logo">
                         <img src="./assets/images/logo.png" alt="Brand Logo">
@@ -41,13 +41,107 @@
                     </ul>
                 </div>
                 <div class="nav-search-box">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
                     <input type="text" placeholder="Search" class="search-input">
-                    <i class="shopping-cart fa-solid fa-cart-shopping"></i> <sup class="quantity">3</sup>
+                    <i class="shopping-cart fa-solid fa-cart-shopping cursor-pointer"></i> <sup class="quantity">3</sup>
                 </div>
             </nav>
         </div>
         <!-------End Navigation menu section------>
+
+        <!--Top Banner Section Start-->
+        <section class="container container-padding">
+            <div class="top-banner flex">
+                <div class="top-content-section">
+                    <div class="content-title-section">
+                        <p class="food-title"> Fast </p>
+                        <div>
+                            <span>Food</span>
+                            <span>Delivery</span>
+                        </div>
+                    </div>
+
+                    <p class="short-description">Sed ut perspiciatis unde omnis iste natus sit <br> voluptatem
+                        accusantium doloremque laudantium
+                    </p>
+
+                    <button class="order-btn btn">Order Now</button>
+                    <button class="btn play-video-btn"><i class="fa-solid fa-play"></i> <span> Watch
+                            Video</span></button>
+
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="rating-text"> <span>5 star rating</span> <br>
+                        based on 1788 reviews
+                    </p>
+                </div>
+
+                <div class="top-content-banner">
+                    <img class="img-responsive" src="./assets/images/food1.png" alt="Top Banner Image">
+                </div>
+            </div>
+        </section>
+        <!--Top Banner Section End-->
+        <!--Trending Food Section Start-->
+        <section class="container container-padding">
+            <h2 class="content-title">Todays Trending Food</h2>
+            <p class="content-description">Peoples loves it most the past week...</p>
+            <div class="flex trending-food">
+                <div>
+                    <div class="banner">
+                        <img src="./assets/images/foodlist/food (1).png" alt="Food Image">
+                    </div>
+                    <div class="gallery">
+                        <img src="./assets/images/foodlist/food (1).png" alt="Food Image">
+                        <img src="./assets/images/foodlist/food (1).png" alt="Food Image">
+                        <img src="./assets/images/foodlist/food (1).png" alt="Food Image">
+                        <img src="./assets/images/foodlist/food (1).png" alt="Food Image">
+                    </div>
+                </div>
+
+                <div class="trending-food-content">
+                    <div>
+                        <h3 class="content-sub-title">Basomoti Kacchi Biriyani</h3>
+                        <h2 class="price">৳1,050</h2>
+                        <div class="rating rating-dark">
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div>
+                                <small>5.0 out of (1256) Reviews</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h5 class="selected-quantity">Select Quantity</h5>
+                        <div class="quantity-btn-group">
+                            <button class="quantity-btn cursor-pointer">0.5</button>
+                            <button class="quantity-btn cursor-pointer">1</button>
+                            <button class="quantity-btn cursor-pointer">2</button>
+                            <button class="quantity-btn cursor-pointer">5</button>
+                            <button class="quantity-btn cursor-pointer">10</button>
+                            <button class="quantity-btn cursor-pointer">20</button>
+                        </div>
+                        <div class="food-cart-section">
+                            <div class="wishlist"><i class="fa-solid fa-heart"></i></div>
+                            <div class="add-cart"><i class="fa-solid fa-cart-shopping"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--Trending Food Section End-->
     </div>
 </body>
 
