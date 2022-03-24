@@ -1,6 +1,7 @@
 :root {
   /******** color ********/
-  --color-light-dark: #2f2f2f;
+  /* --color-light-dark: #2f2f2f; */
+  --color-light-dark: #1E2833;
   --color-white: #f4ece1;
   --color-pure-white: #ffffff;
   --color-orange: #ff7e00;
@@ -38,7 +39,7 @@ body {
 }
 
 .container-padding {
-  padding: 120px 0px 40px 0px;
+  padding: 100px 0px 30px 0px;
 }
 
 ul li {
@@ -389,7 +390,7 @@ p.rating-text > span {
   display: inline-block;
   padding: 10px;
   position: absolute;
-  top: 0;
+  top: -10px;
   left: 0;
   z-index: 99;
 }
@@ -447,4 +448,58 @@ p.rating-text > span {
   color: var(--color-green);
   padding: 5px 10px;
   border-radius: 5px;
+}
+
+/*====================================================
+                    Contact Section CSS*
+=====================================================*/
+.contact {
+  justify-content: space-between;
+  gap: 1rem;
+}
+.contact > .contact-from{
+  width: 40%;
+}
+.contact > div{
+  width: 45%;
+}
+.contact-form input[type="text"]{
+  width: 100%;
+  border: 0;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--color-light-gray);
+  margin: 10px 0px;
+  transition: 0.5s ease;
+}
+.contact-form input:focus{
+  outline: 0;
+  border-bottom: 1px solid var(--color-green);
+}
+.contact-submit{
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: var(--color-green);
+  color: var(--color-pure-white);
+}
+
+/*====================================================
+                    Footer Section CSS*
+=====================================================*/
+.footer{
+  background-color: var(--color-light-dark);
+  /* padding: 25px; */
+}
+.footer .footer-shape img{
+  width: 41px;
+}
+.footer .footer-shape{
+  border-bottom: 1px solid var(--color-light-gray);
+  padding-bottom: 20px;
+}
+
+.footer a{
+  color: var(--color-pure-white);
 }
