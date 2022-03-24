@@ -11,6 +11,7 @@
   --color-light-salmon: #ff666a;
   --color-green: #219653;
   --color-light-gray: #909090;
+  --color-pink: #FFD2DD;
 
   /*********Container width************/
   --container-sm: 540px;
@@ -503,3 +504,69 @@ p.rating-text > span {
 .footer a{
   color: var(--color-pure-white);
 }
+.footer-inner, .footer-policy{
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 10px 10px 10px;
+}
+
+.footer-inner > div{
+  width: 23%;
+}
+
+.footer-inner .subscription h6{
+ color: var(--color-pure-white);
+ font-size: 1.5rem;
+ line-break: normal;
+ text-transform: capitalize;
+ font-weight: 600;
+
+}
+.footer-inner .subscription input{
+  border: 0;
+  border-bottom: 1px solid var(--color-pink);
+  color: var(--color-pure-white);
+  padding: 15px 5px;
+  outline: 0;
+  background-color: transparent;
+}
+.footer-inner .subscription .subscription-form{
+  position: relative;
+}
+.footer-inner .subscription .subscription-form button{
+  background-color: var(--color-pink);
+  padding: 10px 15px;
+  border-radius: 50px 50px 0px 0px / 25px 25px 25px 25px;
+  position: absolute;
+  bottom: 0;
+}
+.footer-inner .footer-submenu-title{
+  color: var(--color-pink);
+  font-size: 1.2rem;
+}
+
+.footer-submenu ul{
+  /* display: inline; */
+  margin-top: -35px;
+  margin-left: -35px;
+}
+.footer-submenu ul li a{
+  margin: 5px 0px;
+  display: inline-block;
+  transition: 0.5s all ease;
+}
+.footer-policy .terms a{
+  margin: 0px 10px;
+  transition: 0.5s ease;
+}
+
+.footer-policy .footer-social a{
+  margin: 0px 10px;
+  font-size: 1.2rem;
+  transition: 0.5s ease;
+}
+
+.footer-submenu ul li a:hover, .footer-policy .terms a:hover, .footer-policy .footer-social a:hover{
+  color: var(--color-red);
+}
+
