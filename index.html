@@ -25,32 +25,41 @@
 <body>
     <div id="wrapper">
         <!-------Start Navigation menu section------>
-        <div class="container">
-            <nav class="navbar flex">
-                <div>
-                    <a href="#wrapper" class="navbar-logo">
-                        <img src="./assets/images/logo.png" alt="Brand Logo">
-                    </a>
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-inner flex">
+                    <div class="nav-logo">
+                        <a href="#wrapper" class="navbar-logo">
+                            <img src="./assets/images/logo.png" alt="Brand Logo">
+                        </a>
+                    </div>
+
+                    <div class="navbar-inner-menu flex">
+                        <!-- <span class="md-hidden navbar-toggle">
+                            <i class="fas fa-bars" id="toggle-icon"></i>
+                        </span> -->
+                        <div class="navbar-menu">
+                            <ul>
+                                <li> <a href="#wrapper" class="active">Home</a></li>
+                                <li> <a href="#menu">Menu</a></li>
+                                <li> <a href="#contact">Contact</a></li>
+                                <li> <a href="#shop">Shop</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav-search-box">
+                            <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+                            <input type="text" placeholder="Search" class="search-input">
+                            <i class="shopping-cart fa-solid fa-cart-shopping cursor-pointer"></i> <sup
+                                class="quantity">3</sup>
+                        </div>
+                    </div>
                 </div>
-                <div class="navbar-menu">
-                    <ul>
-                        <li> <a href="#home" class="active">Home</a></li>
-                        <li> <a href="#menu">Menu</a></li>
-                        <li> <a href="#contact">Contact</a></li>
-                        <li> <a href="#shop">Shop</a></li>
-                    </ul>
-                </div>
-                <div class="nav-search-box">
-                    <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
-                    <input type="text" placeholder="Search" class="search-input">
-                    <i class="shopping-cart fa-solid fa-cart-shopping cursor-pointer"></i> <sup class="quantity">3</sup>
-                </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
         <!-------End Navigation menu section------>
 
         <!--Top Banner Section Start-->
-        <section class="container container-padding">
+        <section class="container padding-top">
             <div class="top-banner flex">
                 <div class="top-content-section">
                     <div class="content-title-section">
@@ -89,7 +98,7 @@
         <!--Top Banner Section End-->
 
         <!--Trending Food Section Start-->
-        <section class="container container-padding">
+        <section class="container padding-top">
             <h2 class="content-title">Todays Trending Food</h2>
             <p class="content-description">Peoples loves it most the past week...</p>
             <div class="flex trending-food">
@@ -145,10 +154,10 @@
         <!--Trending Food Section End-->
 
         <!--Popular Product list Section Start-->
-        <section class="container container-padding" id="menu">
+        <section class="container padding-top" id="menu">
             <h2 class="content-title">Popular Items</h2>
             <p class="content-description">Most Ordered Items</p>
-            <div class="product-list">
+            <div class="product-list flex">
 
                 <div class="product-cart cursor-pointer">
                     <div class="product-img">
@@ -259,7 +268,7 @@
         <!--Popular Product list Section End-->
 
         <!--Contact Section Start-->
-        <section id="contact" class="container container-padding">
+        <section id="contact" class="container padding-top">
             <h2 class="content-title">Contact us</h2>
             <p class="content-description">Need an experienced and skilled hand with custom IT projects? <br>
                 Fill out the form to get a free consultation.</p>
@@ -298,8 +307,8 @@
         <!--Contact Section End-->
 
         <!--Footer Section Start-->
-        <section id="shop" class="footer">
-            <div class="container container-padding">
+        <section id="shop" class="footer margin-top">
+            <div class="container padding-top">
                 <div class="footer-shape">
                     <img src="./assets/images/Shape.png" alt="Footer Shapes">
                 </div>
@@ -371,6 +380,11 @@
         </section>
         <!--Footer Section End-->
     </div>
+
+    <!--Add Scripts-->
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+
 </body>
 
 </html>
