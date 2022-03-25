@@ -1,7 +1,7 @@
 :root {
   /******** color ********/
   /* --color-light-dark: #2f2f2f; */
-  --color-light-dark: #1E2833;
+  --color-light-dark: #1e2833;
   --color-white: #f4ece1;
   --color-pure-white: #ffffff;
   --color-orange: #ff7e00;
@@ -11,7 +11,7 @@
   --color-light-salmon: #ff666a;
   --color-green: #219653;
   --color-light-gray: #909090;
-  --color-pink: #FFD2DD;
+  --color-pink: #ffd2dd;
 
   /*********Container width************/
   --container-sm: 540px;
@@ -66,10 +66,10 @@ a {
   clear: both;
 }
 
-.padding-top{
+.padding-top {
   padding-top: 50px;
 }
-.margin-top{
+.margin-top {
   margin-top: 25px;
 }
 .img-responsive {
@@ -96,7 +96,14 @@ a {
 /*====================================================
                     Navigation Section CSS*
 =====================================================*/
-.navbar{
+.sm-hidden {
+  display: block;
+}
+
+.md-hidden {
+  display: none;
+}
+.navbar {
   position: fixed;
   width: 100%;
   background-color: var(--color-white);
@@ -111,15 +118,16 @@ a {
   width: 80%;
   justify-content: space-between;
   align-items: center;
-
 }
-.navbar-inner .nav-logo{
+.navbar-inner .nav-logo {
   width: 20%;
 }
 .navbar-logo img {
   width: 80px;
 }
-
+.nav-logo .navbar-toggle i {
+  font-size: 2rem;
+}
 .navbar-inner .navbar-menu ul {
   display: flex;
   gap: 1rem;
@@ -140,6 +148,51 @@ a {
 .navbar-inner .navbar-menu ul li a.active {
   color: var(--color-red);
 }
+
+/*Mobile Navbar*/
+.mobile-navbar-top .nav-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobile-navbar-top {
+  margin: 2rem;
+}
+
+.mobile-navbar > .navbar-menu > ul li a {
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-left: -2rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  padding: 10px;
+  transition: 0.5s all;
+  display: block;
+}
+.mobile-navbar > .navbar-menu > ul li a:hover {
+  background-color: var(--color-red);
+  color: var(--color-white) !important;
+  border-radius: 5px;
+}
+.mobile-navbar > .nav-search-box {
+  position: relative;
+  margin: 1rem;
+}
+.mobile-navbar > .nav-search-box input {
+  width: 75%;
+}
+.mobile-navbar > .nav-search-box .quantity {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*Mobile Navbar close*/
 .nav-search-box {
   background-color: var(--color-white);
   padding: 8px 15px;
@@ -280,6 +333,55 @@ p.rating-text > span {
   color: var(--color-light-dark);
 }
 
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s all;
+}
+
+.video-container > .close {
+  position: absolute;
+  top: 18%;
+  right: 23%;
+  font-size: 1.2rem;
+  z-index: 999;
+  background-color: var(--color-red);
+  color: var(--color-pure-white);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.6s ease;
+  box-shadow: 0px 0px 10px var(--color-red);
+}
+
+.video-container > video {
+  width: 80%;
+  max-width: 700px;
+  border-radius: 10px;
+  transform: scale(0);
+  box-shadow: 0 20px 20px var(--color-light-gray);
+  outline: none;
+  transition: 0.5s all;
+}
+.video-container.show {
+  pointer-events: all;
+  opacity: 1;
+}
+.video-container.show > video {
+  transform: scale(1);
+}
 /*====================================================
                     Todays Trending Food CSS*
 =====================================================*/
@@ -367,12 +469,10 @@ p.rating-text > span {
 
 .product-list > .product-cart {
   width: 23.6%;
-  /* flex-basis: 23.6%; */
   background-color: var(--color-pure-white);
   border-radius: 10px;
   position: relative;
   transition: 0.5s all ease;
-  /* overflow: hidden; */
 }
 .product-list > .product-cart:hover {
   box-shadow: 5px 5px 10px 5px rgb(47 47 47 / 15%);
@@ -473,13 +573,13 @@ p.rating-text > span {
   justify-content: space-between;
   gap: 1rem;
 }
-.contact > .contact-from{
+.contact > .contact-from {
   width: 40%;
 }
-.contact > div{
+.contact > div {
   width: 45%;
 }
-.contact-form input[type="text"]{
+.contact-form input[type="text"] {
   width: 100%;
   border: 0;
   background-color: transparent;
@@ -488,11 +588,11 @@ p.rating-text > span {
   margin: 10px 0px;
   transition: 0.5s ease;
 }
-.contact-form input:focus{
+.contact-form input:focus {
   outline: 0;
   border-bottom: 1px solid var(--color-green);
 }
-.contact-submit{
+.contact-submit {
   width: 100%;
   margin-top: 10px;
   border-radius: 5px;
@@ -504,40 +604,40 @@ p.rating-text > span {
 /*====================================================
                     Footer Section CSS*
 =====================================================*/
-.footer{
+.footer {
   background-color: var(--color-light-dark);
   /* padding: 25px; */
 }
-.footer .footer-shape img{
+.footer .footer-shape img {
   width: 41px;
 }
-.footer .footer-shape{
+.footer .footer-shape {
   border-bottom: 1px solid var(--color-light-gray);
   padding-bottom: 20px;
 }
 
-.footer a{
+.footer a {
   color: var(--color-pure-white);
 }
-.footer-inner, .footer-policy{
+.footer-inner,
+.footer-policy {
   justify-content: space-between;
   align-items: flex-start;
   padding: 30px 10px 10px 10px;
 }
 
-.footer-inner > div{
+.footer-inner > div {
   width: 23%;
 }
 
-.footer-inner .subscription h6{
- color: var(--color-pure-white);
- font-size: 1.5rem;
- line-break: normal;
- text-transform: capitalize;
- font-weight: 600;
-
+.footer-inner .subscription h6 {
+  color: var(--color-pure-white);
+  font-size: 1.5rem;
+  line-break: normal;
+  text-transform: capitalize;
+  font-weight: 600;
 }
-.footer-inner .subscription input{
+.footer-inner .subscription input {
   border: 0;
   border-bottom: 1px solid var(--color-pink);
   color: var(--color-pure-white);
@@ -545,43 +645,44 @@ p.rating-text > span {
   outline: 0;
   background-color: transparent;
 }
-.footer-inner .subscription .subscription-form{
+.footer-inner .subscription .subscription-form {
   position: relative;
 }
-.footer-inner .subscription .subscription-form button{
+.footer-inner .subscription .subscription-form button {
   background-color: var(--color-pink);
   padding: 10px 15px;
   border-radius: 50px 50px 0px 0px / 25px 25px 25px 25px;
   position: absolute;
   bottom: 0;
 }
-.footer-inner .footer-submenu-title{
+.footer-inner .footer-submenu-title {
   color: var(--color-pink);
   font-size: 1.2rem;
 }
 
-.footer-submenu ul{
+.footer-submenu ul {
   /* display: inline; */
   margin-top: -35px;
   margin-left: -35px;
 }
-.footer-submenu ul li a{
+.footer-submenu ul li a {
   margin: 5px 0px;
   display: inline-block;
   transition: 0.5s all ease;
 }
-.footer-policy .terms a{
+.footer-policy .terms a {
   margin: 0px 10px;
   transition: 0.5s ease;
 }
 
-.footer-policy .footer-social a{
+.footer-policy .footer-social a {
   margin: 0px 10px;
   font-size: 1.2rem;
   transition: 0.5s ease;
 }
 
-.footer-submenu ul li a:hover, .footer-policy .terms a:hover, .footer-policy .footer-social a:hover{
+.footer-submenu ul li a:hover,
+.footer-policy .terms a:hover,
+.footer-policy .footer-social a:hover {
   color: var(--color-red);
 }
-

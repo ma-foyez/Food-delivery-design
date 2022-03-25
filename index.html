@@ -20,6 +20,7 @@
 
     <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/b36397baf4.js" crossorigin="anonymous"></script>
+   
 </head>
 
 <body>
@@ -27,33 +28,68 @@
         <!-------Start Navigation menu section------>
         <nav class="navbar">
             <div class="container">
-                <div class="navbar-inner flex sm-hidden">
-                    <div class="nav-logo">
-                        <a href="#wrapper" class="navbar-logo">
-                            <img src="./assets/images/logo.png" alt="Brand Logo">
-                        </a>
-                    </div>
-
-                    <div class="navbar-inner-menu flex">
-                        <!-- <span class="md-hidden navbar-toggle">
-                            <i class="fas fa-bars" id="toggle-icon"></i>
-                        </span> -->
-                        <div class="navbar-menu">
-                            <ul>
-                                <li> <a href="#wrapper" class="active">Home</a></li>
-                                <li> <a href="#menu">Menu</a></li>
-                                <li> <a href="#contact">Contact</a></li>
-                                <li> <a href="#shop">Shop</a></li>
-                            </ul>
+                <!--Desktop & tablet device-->
+                <div class="sm-hidden">
+                    <div class="navbar-inner flex">
+                        <div class="nav-logo">
+                            <a href="#wrapper" class="navbar-logo">
+                                <img src="./assets/images/logo.png" alt="Brand Logo">
+                            </a>
                         </div>
-                        <div class="nav-search-box">
-                            <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
-                            <input type="text" placeholder="Search" class="search-input">
-                            <i class="shopping-cart fa-solid fa-cart-shopping cursor-pointer"></i> <sup
-                                class="quantity">3</sup>
+
+                        <div class="navbar-inner-menu flex">
+
+                            <div class="navbar-menu">
+                                <ul>
+                                    <li> <a href="#wrapper" class="active">Home</a></li>
+                                    <li> <a href="#menu">Menu</a></li>
+                                    <li> <a href="#contact">Contact</a></li>
+                                    <li> <a href="#shop">Shop</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-search-box">
+                                <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+                                <input type="text" placeholder="Search" class="search-input">
+                                <i class="shopping-cart fa-solid fa-cart-shopping cursor-pointer"></i> <sup
+                                    class="quantity">3</sup>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
+                <!--For All small & mobile device-->
+                <div class="md-hidden">
+                    <div class="mobile-navbar-top">
+                        <div class="nav-logo">
+                            <a href="#wrapper" class="navbar-logo">
+                                <img src="./assets/images/logo.png" alt="Brand Logo">
+                            </a>
+                            <span class="navbar-toggle cursor-pointer">
+                                <i class="fas fa-bars" id="toggle-icon"></i>
+                            </span>
+                        </div>
+
+                        <div class="mobile-navbar">
+                            <div class="navbar-menu">
+                                <ul>
+                                    <li> <a href="#wrapper" class="active">Home</a></li>
+                                    <li> <a href="#menu">Menu</a></li>
+                                    <li> <a href="#contact">Contact</a></li>
+                                    <li> <a href="#shop">Shop</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-search-box">
+                                <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+                                <input type="text" placeholder="Search" class="search-input">
+                                <i class="shopping-cart fa-solid fa-cart-shopping cursor-pointer"></i> <sup
+                                    class="quantity">3</sup>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </nav>
         <!-------End Navigation menu section------>
@@ -77,6 +113,13 @@
                     <button class="order-btn btn">Order Now</button>
                     <button class="btn play-video-btn"><i class="fa-solid fa-play"></i> <span> Watch
                             Video</span></button>
+
+
+                    <div class="video-container">
+                        <span class="close cursor-pointer">&#10006</span>
+                        <video src="./assets/video/mov_bbb.mp4" controls></video>
+                    </div>
+
 
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
@@ -260,6 +303,38 @@
                             <span>99</span>
                             <button class="increase-quantity btn">+</button>
                         </div>
+                    </div>
+                </div>
+
+                <div class="product-cart cursor-pointer">
+                    <div class="product-img">
+                        <img class="img-responsive" src="./assets/images/foodlist/food (1).jpg" alt="product image">
+                    </div>
+                    <p class="discount-offer"><span>25% off</span></p>
+                    <div class="product-inner-card">
+                        <h3 class="product-title">Basomoti Kacchi Biriyani</h3>
+                        <p class="product-sub-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+                            quam officiis iure! Est ipsam libero dolores doloremque cum nobis,</p>
+                        <p class="product-price"><s>৳1,200</s> <span class="regular-price">৳1,000</span></p>
+                        <button class="add-to-cart-btn btn">
+                            + add
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-cart cursor-pointer">
+                    <div class="product-img">
+                        <img class="img-responsive" src="./assets/images/foodlist/food (1).jpg" alt="product image">
+                    </div>
+                    <p class="discount-offer"><span>25% off</span></p>
+                    <div class="product-inner-card">
+                        <h3 class="product-title">Basomoti Kacchi Biriyani</h3>
+                        <p class="product-sub-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+                            quam officiis iure! Est ipsam libero dolores doloremque cum nobis,</p>
+                        <p class="product-price"><s>৳1,200</s> <span class="regular-price">৳1,000</span></p>
+                        <button class="add-to-cart-btn btn">
+                            + add
+                        </button>
                     </div>
                 </div>
 

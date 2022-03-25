@@ -1,7 +1,6 @@
 $(document).ready(function () {
     // Add smooth scrolling to all links
     $("a").on('click', function (event) {
-
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
             // Prevent default anchor click behavior
@@ -21,15 +20,15 @@ $(document).ready(function () {
         } // End if
     });
 
-
+    // Toggle Navbar
 
     $('.navbar-toggle').on('click', function () {
-        $('.mobile-navbar').toggleClass('mobile-navbar-sidebar-open');
+        $('.mobile-navbar').toggleClass('mobile-navbar-open');
         $('#toggle-icon').toggleClass('fa-times');
     });
 
     $(window).click(function () {
-        $('.mobile-navbar').removeClass('mobile-navbar-sidebar-open');
+        $('.mobile-navbar').removeClass('mobile-navbar-open');
         $('#toggle-icon').addClass('fa-bars');
         $('#toggle-icon').removeClass('fa-times');
     });
@@ -42,4 +41,19 @@ $(document).ready(function () {
         event.stopPropagation();
     });
 
+
+    //video play in popup modal
+
+    const playBtn = document.querySelector('.play-video-btn');
+    const videoContainer = document.querySelector('.video-container');
+    const closeVideo = document.querySelector('.close');
+
+    playBtn.addEventListener('click', () => {
+        videoContainer.classList.add('show');
+    });
+    closeVideo.addEventListener('click', () => {
+        videoContainer.classList.remove('show');
+    });
+    
+    
 });
